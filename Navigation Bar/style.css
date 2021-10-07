@@ -1,0 +1,73 @@
+/* it will help to reduce extra space and also help box sizeing to align them properly*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("./wrtiting-tools.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;   
+}
+.menu {
+    background-color: grey;
+    text-align: center;
+}
+.menu ul {
+    list-style: none;
+    display: inline-flex;
+}
+.menu ul li {
+    width: 150px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: arial;
+}
+.fa {
+    margin: 5px;
+}
+.active, .menu ul li:hover {
+    background-color: goldenrod;
+}
+.dropdown1 {
+    display: none; /*because i dont want to see that every time only when user click on it*/
+}
+.menu ul li:hover .dropdown1 {
+    display: block;
+    position: absolute;
+    background-color: grey;
+    margin-top: 15px;
+    margin-left:-30px ;
+}
+.menu ul li:hover .dropdown1 ul {
+    display: block;
+}
+.menu ul li:hover .dropdown1 ul li {
+    background: transparent;/*remove background color*/
+    border-bottom: 1px solid goldenrod;
+    width: 150px; /*so that border does not change with content length*/
+}
+.menu ul li:hover .dropdown1 ul li a:hover {
+    color: goldenrod;
+}
+.dropdown2 {
+    display: none;
+}
+.select:hover .dropdown2 {
+    display: block;
+    position: absolute;
+    background-color:grey;
+    margin-left: 130px;
+    margin-top:-48px; /* so that i can take it to the top */
+}
+.fa-plus {
+    float: right;
+    color: white;
+}
