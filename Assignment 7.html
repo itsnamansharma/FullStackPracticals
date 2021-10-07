@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        .container {
+            margin: auto;/*to make container center*/
+            margin-top:40px;
+            width:80%;
+            padding: 10px;
+            box-shadow: 0px 0px 5px;
+            
+        }
+        .Header {
+            text-align: center;
+            color: white;
+            background-color: grey;
+            height:40px;
+            margin: 10px;
+            padding-top: 20px;
+        }
+        .Banner {
+            text-align: center;
+            color: white;
+            background-color: skyblue;
+            margin: 10px;
+            padding-top: 250px;
+            height: 300px;
+        }
+        .Section-1 {
+            text-align: center;
+            margin: 10px;
+        }
+        .circle {
+            display: inline-block;
+            background-color: gold;
+            width: 200px;
+            margin: 33px;
+            height: 200px;
+            border-radius: 50%; /*for making a circle*/
+        }
+        .Section-2 {
+            text-align: center;
+            margin: 10px;
+
+        }
+        .Sub-Container {
+            margin:20px;
+        }
+        .Sub-Container .main {
+            float: left;
+            color: white;
+            background-color: grey;
+            text-align: center;
+            width: 43%;
+            margin: 9px 20px;
+            height:500px;
+        }
+        .Sub-Container .main h3 {
+           line-height: 500px;
+        }
+        .Sub-Container .article {
+            width: 42%;
+            margin: 9px 57px;
+            height: 150px;
+            color: white;
+            float: left;
+            background-color: rgb(255, 115, 0);
+        }
+        .Sub-Container .article h3 {
+            line-height: 150px;
+            padding-left: 200px;
+        }
+        /*this will help to take section 3 out from the sub container*/
+        .Sub-Container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        
+        .Section-3 {
+            text-align: center;
+            margin: 10px;
+
+        }
+        .Rectangle {
+            display: inline-block;
+            background-color: red;
+            width: 236px;
+            margin: 14px;
+            height:300px;
+
+        }
+        .Section-4 {
+            text-align: center;
+            margin: 10px;
+        }
+        .Footer {
+            text-align: center;
+            color: white;
+            background-color: pink;
+            height:40px;
+            margin: 10px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class ="Header"><h3>Header</h3></div>
+       <div class="Banner"><h3>Banner</h3></div>
+       <div class="Section-1"><h3>Section-1</h3></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="Section-2"><h3>Section-2</h3></div>
+       <div class="Sub-Container">
+       <div class="main"><h3>Main Content</h3></div>
+       <div class="article"><h3>Article-1</h3></div>
+       <div class="article"><h3>Article-2</h3></div>
+       <div class="article"><h3>Article-3</h3></div>
+    </div>
+       <div class="Section-3"><h3>Section-3</h3></div>
+       <div class="Rectangle"></div>
+       <div class="Rectangle"></div>
+       <div class="Rectangle"></div>
+       <div class="Rectangle"></div>
+       <div class="Section-4"> <h3>Section-4</h3></div>
+       <div class="Footer"> <h3>Footer</h3></div>
+       
+       
+   </div>
+    
+</body>
+</html>
