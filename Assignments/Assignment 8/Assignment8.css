@@ -46,9 +46,9 @@
     background-color: white;
     display: inline-block;
     background-color: gold;
-    width: 300px;
-    margin: 95px;
-    height: 300px;
+    width: 220px;
+    margin: 50px;
+    height: 220px;
     border-radius: 50%; /*for making a circle*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,7 +67,7 @@ h1.about {
             float: left;
             color: white;
             background-color: grey;
-            width: 45%;
+            width: 42%;
             margin: 9px 20px;
             height:800px;
         }
@@ -81,7 +81,7 @@ h1.about {
         }
        
         .Sub-Container .article {
-            width: 45%;
+            width: 42%;
             margin: 9px 57px;
             height: 255px;
             color: white;
