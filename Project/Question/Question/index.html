@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    </head>
+    <body> 
+      <div class="header"></div>
+      <div class="leftbar">
+    <div class="box">
+    <button class="collapsible">Data Structure</button>
+    <div class="content">
+      <ul>
+        <li><a href="#">Array</a></li>
+        <li><a href="#">Linked List</a></li>
+        <li><a href="#">Stack</a></li>
+        <li><a href="#">Queue</a></li>
+        <li><a href="#">Tree</a></li>
+        <li><a href="#">Graph</a></li>
+        <li><a href="#">Heap</a></li>
+        <li><a href="#">String</a></li>
+        <li><a href="#">Recursion</a></li>
+    </ul>  
+    </div>
+  </div>
+
+    <div class="box">
+    <button class="collapsible">Algorithms</button>
+    <div class="content">
+      <ul>
+        <li><a href="#" >Mathematical</a></li>
+        <li><a href="#">DP</a></li>
+        <li><a href="#">Sorting</a></li>
+            <li><a href="#">Binary Search</a></li>
+            <li><a href="#">Back Tracking </a></li>
+            <li><a href="#">Greedy</a></li>
+       </ul>
+    </div>
+  </div>
+
+    <div class="box">
+    <button class="collapsible">Company Tags</button>
+    <div class="content">
+      <ul>
+        <li><a href="#">Amazon</a></li>
+        <li><a href="#">Microsoft</a></li>
+        <li><a href="#">Google</a></li>
+        <li><a href="#">Adobe</a></li>
+        <li><a href="#">Samsung</a></li>
+        <li><a href="#">VMWare</a></li>         
+    </ul>
+    </div>
+  </div>
+</div>
+    
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+
+    <div class="table">
+      <div class="ds">
+        <table>
+          <caption>Data Structure</caption>
+          <tr>
+            <td><a href="#">Array</a>[30]</td>
+            <td><a href="#">Linked List</a>[30]</td>
+            <td><a href="#">Stack</a>[30]</td>
+          </tr>
+
+          <tr>
+            <td><a href="#">Queue</a>[30]</td>
+            <td><a href="#">Tree</a>[30]</td>
+            <td><a href="#">Graphs</a>[30]</td>
+          </tr>
+
+          <tr>
+            <td><a href="#">Recursion</a>[30]</td>
+            <td><a href="#">String</a>[30]</td>
+            <td><a href="#">Heap</a>[30]</td>
+          </tr>
+        </table>
+       
+      </div>
+      <div class="algo">
+        <table>
+          <caption>Algorithms</caption>
+          <tr>
+            <td><a href="#">Mathematical</a>[30]</td>
+            <td><a href="#">DP</a>[30]</td>
+            <td><a href="#">Sorting</a>[30]</td>
+          </tr>
+
+          <tr>
+            <td><a href="#">Binary Search</a>[30]</td>
+            <td><a href="#">Back Tracking</a>[30]</td>
+            <td><a href="#">Greedy</a>[30]</td>
+          </tr>
+        </table>
+        
+      </div>
+      <div class="cs">
+        <table>
+          <caption>Company Tags</caption>
+          <tr>
+            <td><a href="#">Amazon</a>[30]</td>
+            <td><a href="#">Microsoft</a>[30]</td>
+            <td><a href="#">Google</a>[30]</td>
+          </tr>
+
+          <tr>
+            <td><a href="#">Adobe</a>[30]</td>
+            <td><a href="#">Samsung</a>[30]</td>
+            <td><a href="#">VMWare</a>[30]</td>
+          </tr>
+        </table>
+       
+      </div>
+
+    </div>
+    
+    </body>
+    </html>
+    

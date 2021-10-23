@@ -1,0 +1,1785 @@
+*{
+  margin: 0;
+  padding: 0;
+  /* user-select: none; */
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@media (min-width: 1201px) {
+.header {
+  z-index: 2;
+  position: fixed;
+  width:100%;
+  text-align: center;
+  color: white;
+  line-height: 60px;
+  height:60px;
+  background-color: #1b1b1b;
+  display: block;
+}
+.sidebar {
+  top: 60px;
+  position: fixed;
+  width:20%;
+  height: 100%;
+  opacity:0.8;
+  background: #1b1b1b;
+  /* left:-100%; */
+  transition: all 1s;
+}
+.sidebar .text {
+  color: white;
+  font-size: 25px;
+  font-weight: 600; /*it will bold the white letter*/
+  line-height: 65px;
+  text-align: center;
+  background: #1b1b1b;
+  letter-spacing: 1px;
+}
+nav ul {
+  background-color: #1b1b1b;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+nav ul li {
+  line-height: 44px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left:5px solid transparent; /*transparent matlb it will not visible */
+}
+nav ul li a:hover {
+  border-left-color: grey;
+  color: cyan;
+  background: #1e1e1e;
+}
+nav ul ul {
+  position: static;/*it is the default value*/
+  display: none;/*it will remove it and another will come at that place*/
+}
+nav ul .array-show.show0 {
+  display: block;
+}
+nav ul .list-show.show1 {
+  display: block;
+}
+nav ul .stack-show.show2 {
+  display: block;
+}
+nav ul .queue-show.show3 {
+  display: block;
+}
+nav ul .tree-show.show4 {
+  display: block;
+}
+nav ul .graph-show.show5 {
+  display: block;
+}
+nav ul .string-show.show6 {
+  display: block;
+}
+nav ul .recursion-show.show7 {
+  display: block;
+}
+nav ul .heap-show.show8 {
+  display: block;
+}
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+nav ul ul li a {
+  font-size: 17px;
+  color:#e6e6e6;
+  padding-left: 80px;
+
+}
+nav  ul li a span {
+  position: absolute; /*it will take an sign to the right side but 20px before*/
+  top:50%;
+  right:20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transform: transform 0.4s;
+
+}
+nav ul li a span.rotate {
+  transform: translateY(-50%) rotate(-180deg);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.line {
+  transition: 0.5s;
+  transition-delay: 0s;
+  margin: 5px;
+  top: 55px;
+  border-left: 4px solid darkgray;
+  position: fixed;
+  left:22%;
+  height:100%;
+  /* opacity: 0; */
+}
+
+.container {
+  width: 70%;
+  position: relative;
+  left: 25%;
+  top: 70px;
+  height:100%;
+  transition: all 1s;
+}
+
+.cards {
+  margin-left: 20px;
+  display: inline-block;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  opacity: 0.8;
+  background-color: black;
+  width:47%;
+  height:250px;
+  box-shadow: 8px 8px 25px black;
+  transition: all .8s;
+  
+}
+.cards:hover {
+  box-shadow: 0 0 5px aqua;
+  transform:scale(1.1);
+  border-radius: 30px;
+}
+.cards .title {
+    font-size: 27px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.cards .topic-tags {
+    font-size: 15px;
+    margin:8px 22px;
+}
+.cards .difficulty {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.cards .popularity {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 14px;
+}
+
+@keyframes easy {
+  from{
+    width: 0px;
+    left:0px
+  }
+  to {
+    width:40%;
+    left:0px;
+  }
+}
+
+.dif {
+  margin-top:5px;
+  background-color: grey;
+  border-radius: 10px;
+  opacity: 0.5;
+  height: 7px;
+  width:90%;
+  position: relative;
+}
+.easy {
+  height: 7px;
+  animation: easy 7s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 1.0;
+  animation-fill-mode: both;
+  position: absolute;
+  background-color: aqua;
+}
+
+@keyframes hard {
+  from{
+    width: 0px;
+    left:0px
+  }
+  to {
+    width:100%;
+    left:0px;
+  }
+}
+.hard {
+  height: 7px;
+  animation: hard 7s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 1.0;
+  animation-fill-mode: both;
+  position: absolute;
+  background-color: aqua;
+}
+
+@keyframes medi {
+  from{
+    width: 0px;
+    left:0px
+  }
+  to {
+    width:75%;
+    left:0px;
+  }
+}
+
+.medi {
+  height: 7px;
+  animation: medi 7s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 1.0;
+  animation-fill-mode: both;
+  position: absolute;
+  background-color: aqua;
+}
+@keyframes nor {
+  from{
+    width: 0px;
+    left:0px
+  }
+  to {
+    width:70%;
+    left:0px;
+  }
+}
+.popular {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  background-color: grey;
+  border-radius: 10px;
+  opacity: 0.5;
+  height: 7px;
+  width: 90%;
+  position: relative;
+
+}
+.nor {
+  height: 7px;
+  animation: nor 7s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 1.0;
+  animation-fill-mode: both;
+  position: absolute;
+  background-color: aquamarine;
+}
+
+@keyframes high {
+  from{
+    width: 0px;
+    left:0px
+  }
+  to {
+    width:100%;
+    left:0px;
+  }
+}
+
+.high {
+  height: 7px;
+  animation: high 7s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 1.0;
+  animation-fill-mode: both;
+  position: absolute;
+  background-color: aquamarine;
+}
+@keyframes low {
+  from{
+    width: 0px;
+    left:0px
+  }
+  to {
+    width:45%;
+    left:0px;
+  }
+}
+
+.low {
+  height: 7px;
+  animation: low 7s;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  opacity: 1.0;
+  animation-fill-mode: both;
+  position: absolute;
+  background-color: aquamarine;
+}
+.show-btn,.hide-btn {
+    opacity:0;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    top: 15px;
+    left:20px; 
+}
+.hide-btn {
+    opacity: 0;
+}
+#chk:checked ~ .sidebar {
+    left:0;
+}
+#chk:checked ~ .show-btn {
+  opacity:0;
+}
+#chk:checked ~ .hide-btn {
+  opacity:1.0;
+}
+#chk:checked ~ .line {
+  transition-delay: 1s;
+  opacity: 1;
+}
+#chk:checked ~ .container {
+  margin-left: 25%;
+  z-index:-1;
+  margin-left: 25%;
+  width: 60%;
+  position: absolute;
+  top: 60px;;
+  height:100%;
+} 
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .header {
+    z-index: 2;
+    position: fixed;
+    width:100%;
+    text-align: center;
+    color: white;
+    line-height: 60px;
+    height:60px;
+    background-color: #1b1b1b;
+    display: block;
+  }
+  .sidebar {
+    top: 60px;
+    position: fixed;
+    width:20%;
+    height: 100%;
+    opacity:0.8;
+    background: #1b1b1b;
+    /* left:-100%; */
+    transition: all 1s;
+  }
+  .sidebar .text {
+    color: white;
+    font-size: 25px;
+    font-weight: 600; /*it will bold the white letter*/
+    line-height: 55px;
+    text-align: center;
+    background: #1b1b1b;
+    letter-spacing: 1px;
+  }
+  nav ul {
+    background-color: #1b1b1b;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+  nav ul li {
+    line-height: 37px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left:5px solid transparent; /*transparent matlb it will not visible */
+  }
+  nav ul li a:hover {
+    border-left-color: grey;
+    color: cyan;
+    background: #1e1e1e;
+  }
+  nav ul ul {
+    position: static;/*it is the default value*/
+    display: none;/*it will remove it and another will come at that place*/
+  }
+  nav ul .array-show.show0 {
+    display: block;
+  }
+  nav ul .list-show.show1 {
+    display: block;
+  }
+  nav ul .stack-show.show2 {
+    display: block;
+  }
+  nav ul .queue-show.show3 {
+    display: block;
+  }
+  nav ul .tree-show.show4 {
+    display: block;
+  }
+  nav ul .graph-show.show5 {
+    display: block;
+  }
+  nav ul .string-show.show6 {
+    display: block;
+  }
+  nav ul .recursion-show.show7 {
+    display: block;
+  }
+  nav ul .heap-show.show8 {
+    display: block;
+  }
+  nav ul ul li {
+    line-height: 27px;
+    border-bottom: none;
+  }
+  nav ul ul li a {
+    font-size: 17px;
+    color:#e6e6e6;
+    padding-left: 80px;
+  
+  }
+  nav  ul li a span {
+    position: absolute; /*it will take an sign to the right side but 20px before*/
+    top:50%;
+    right:20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transform: transform 0.4s;
+  
+  }
+  nav ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  a{
+      text-decoration: none;
+      color: white;
+  }
+  .line {
+    transition: 0.5s;
+    transition-delay: 0s;
+    margin: 5px;
+    top: 55px;
+    border-left: 4px solid darkgray;
+    position: fixed;
+    left:22%;
+    height:100%;
+    /* opacity: 0; */
+  }
+  
+  .container {
+    width: 70%;
+    position: relative;
+    left: 25%;
+    top: 70px;
+    height:100%;
+    transition: all 1s;
+  }
+  
+  .cards {
+    margin-left: 20px;
+    display: inline-block;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    opacity: 0.8;
+    background-color: black;
+    width:46%;
+    height:250px;
+    box-shadow: 0px 0px 5px;
+    transition: all .8s;
+    
+  }
+  .cards:hover {
+    box-shadow: 0 0 5px aqua;
+    transform:scale(1.1);
+    border-radius: 30px;
+  }
+  .cards .title {
+      font-size: 22px;
+      font-weight: 500;
+      padding-top: 20px;
+      padding-left: 20px;
+  }
+  .cards .topic-tags {
+      font-size: 15px;
+      margin:8px 22px;
+  }
+  .cards .difficulty {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .cards .popularity {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 14px;
+  }
+  
+  @keyframes easy {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:40%;
+      left:0px;
+    }
+  }
+  
+  .dif {
+    margin-top:5px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width:90%;
+    position: relative;
+  }
+  .easy {
+    height: 7px;
+    animation: easy 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  
+  @keyframes hard {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:100%;
+      left:0px;
+    }
+  }
+  .hard {
+    height: 7px;
+    animation: hard 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  
+  @keyframes medi {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:75%;
+      left:0px;
+    }
+  }
+  
+  .medi {
+    height: 7px;
+    animation: medi 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  @keyframes nor {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:70%;
+      left:0px;
+    }
+  }
+  .popular {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width: 90%;
+    position: relative;
+  
+  }
+  .nor {
+    height: 7px;
+    animation: nor 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  
+  @keyframes high {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:100%;
+      left:0px;
+    }
+  }
+  
+  .high {
+    height: 7px;
+    animation: high 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  @keyframes low {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:45%;
+      left:0px;
+    }
+  }
+  
+  .low {
+    height: 7px;
+    animation: low 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  .show-btn,.hide-btn {
+      opacity:0;
+      font-size: 30px;
+      color: white;
+      position: fixed;
+      top: 15px;
+      left:20px; 
+  }
+  .hide-btn {
+      opacity: 0;
+  }
+  #chk:checked ~ .sidebar {
+      left:0;
+  }
+  #chk:checked ~ .show-btn {
+    opacity:0;
+  }
+  #chk:checked ~ .hide-btn {
+    opacity:1.0;
+  }
+  #chk:checked ~ .line {
+    transition-delay: 1s;
+    opacity: 1;
+  }
+  #chk:checked ~ .container {
+    margin-left: 25%;
+    z-index:-1;
+    margin-left: 25%;
+    width: 60%;
+    position: absolute;
+    top: 60px;;
+    height:100%;
+  } 
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    z-index: 2;
+    position: fixed;
+    width:100%;
+    text-align: center;
+    color: white;
+    line-height: 60px;
+    height:60px;
+    background-color: #1b1b1b;
+    display: block;
+  }
+  .sidebar {
+    top: 60px;
+    position: fixed;
+    width:20%;
+    height: 100%;
+    opacity:0.8;
+    background: #1b1b1b;
+    /* left:-100%; */
+    transition: all 1s;
+  }
+  .sidebar .text {
+    color: white;
+    font-size: 18px;
+    font-weight: 600; /*it will bold the white letter*/
+    line-height: 55px;
+    text-align: center;
+    background: #1b1b1b;
+    letter-spacing: 1px;
+  }
+  nav ul {
+    background-color: #1b1b1b;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+  nav ul li {
+    line-height: 37px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left:5px solid transparent; /*transparent matlb it will not visible */
+  }
+  nav ul li a:hover {
+    border-left-color: grey;
+    color: cyan;
+    background: #1e1e1e;
+  }
+  nav ul ul {
+    position: static;/*it is the default value*/
+    display: none;/*it will remove it and another will come at that place*/
+  }
+  nav ul .array-show.show0 {
+    display: block;
+  }
+  nav ul .list-show.show1 {
+    display: block;
+  }
+  nav ul .stack-show.show2 {
+    display: block;
+  }
+  nav ul .queue-show.show3 {
+    display: block;
+  }
+  nav ul .tree-show.show4 {
+    display: block;
+  }
+  nav ul .graph-show.show5 {
+    display: block;
+  }
+  nav ul .string-show.show6 {
+    display: block;
+  }
+  nav ul .recursion-show.show7 {
+    display: block;
+  }
+  nav ul .heap-show.show8 {
+    display: block;
+  }
+  nav ul ul li {
+    line-height: 27px;
+    border-bottom: none;
+  }
+  nav ul ul li a {
+    font-size: 13px;
+    color:#e6e6e6;
+    padding-left: 35%;
+  
+  }
+  nav  ul li a span {
+    position: absolute; /*it will take an sign to the right side but 20px before*/
+    top:50%;
+    right:20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transform: transform 0.4s;
+  
+  }
+  nav ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  a{
+      text-decoration: none;
+      color: white;
+  }
+  .line {
+    transition: 0.5s;
+    transition-delay: 0s;
+    margin: 5px;
+    top: 55px;
+    border-left: 4px solid darkgray;
+    position: fixed;
+    left:22%;
+    height:100%;
+    /* opacity: 0; */
+  }
+  
+  .container {
+    width: 70%;
+    position: relative;
+    left: 25%;
+    top: 70px;
+    height:100%;
+    transition: all 1s;
+  }
+  
+  .cards {
+    margin-left: 20px;
+    display: inline-block;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    opacity: 0.8;
+    background-color: black;
+    width:45%;
+    height:220px;
+    box-shadow: 0px 0px 5px;
+    transition: all .8s;
+    
+  }
+  .cards:hover {
+    box-shadow: 0 0 5px aqua;
+    transform:scale(1.1);
+    border-radius: 30px;
+  }
+  .cards .title {
+      font-size: 22px;
+      font-weight: 500;
+      padding-top: 20px;
+      padding-left: 20px;
+  }
+  .cards .topic-tags {
+      font-size: 15px;
+      margin:8px 22px;
+  }
+  .cards .difficulty {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .cards .popularity {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 14px;
+  }
+  
+  @keyframes easy {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:40%;
+      left:0px;
+    }
+  }
+  
+  .dif {
+    margin-top:5px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width:90%;
+    position: relative;
+  }
+  .easy {
+    height: 7px;
+    animation: easy 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  
+  @keyframes hard {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:100%;
+      left:0px;
+    }
+  }
+  .hard {
+    height: 7px;
+    animation: hard 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  
+  @keyframes medi {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:75%;
+      left:0px;
+    }
+  }
+  
+  .medi {
+    height: 7px;
+    animation: medi 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  @keyframes nor {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:70%;
+      left:0px;
+    }
+  }
+  .popular {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width: 90%;
+    position: relative;
+  
+  }
+  .nor {
+    height: 7px;
+    animation: nor 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  
+  @keyframes high {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:100%;
+      left:0px;
+    }
+  }
+  
+  .high {
+    height: 7px;
+    animation: high 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  @keyframes low {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:45%;
+      left:0px;
+    }
+  }
+  
+  .low {
+    height: 7px;
+    animation: low 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  .show-btn,.hide-btn {
+      opacity:0;
+      font-size: 30px;
+      color: white;
+      position: fixed;
+      top: 15px;
+      left:20px; 
+  }
+  .hide-btn {
+      opacity: 0;
+  }
+  #chk:checked ~ .sidebar {
+      left:0;
+  }
+  #chk:checked ~ .show-btn {
+    opacity:0;
+  }
+  #chk:checked ~ .hide-btn {
+    opacity:1.0;
+  }
+  #chk:checked ~ .line {
+    transition-delay: 1s;
+    opacity: 1;
+  }
+  #chk:checked ~ .container {
+    margin-left: 25%;
+    z-index:-1;
+    margin-left: 25%;
+    width: 60%;
+    position: absolute;
+    top: 60px;;
+    height:100%;
+  } 
+ 
+  
+}
+@media (min-width: 570px) and (max-width: 768px) {
+  .header {
+    z-index: 2;
+    position: fixed;
+    width:100%;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+    height:50px;
+    background-color: #1b1b1b;
+    display: block;
+  }
+  .sidebar {
+    top: 50px;
+    position: fixed;
+    width:25%;
+    height: 100%;
+    opacity:0.8;
+    background: #1b1b1b;
+    /* left:-100%; */
+    transition: all 1s;
+  }
+  .sidebar .text {
+    color: white;
+    font-size: 18px;
+    font-weight: 600; /*it will bold the white letter*/
+    line-height: 55px;
+    text-align: center;
+    background: #1b1b1b;
+    letter-spacing: 1px;
+  }
+  nav ul {
+    background-color: #1b1b1b;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+  nav ul li {
+    line-height: 37px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 25px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left:5px solid transparent; /*transparent matlb it will not visible */
+  }
+  nav ul li a:hover {
+    border-left-color: grey;
+    color: cyan;
+    background: #1e1e1e;
+  }
+  nav ul ul {
+    position: static;/*it is the default value*/
+    display: none;/*it will remove it and another will come at that place*/
+  }
+  nav ul .array-show.show0 {
+    display: block;
+  }
+  nav ul .list-show.show1 {
+    display: block;
+  }
+  nav ul .stack-show.show2 {
+    display: block;
+  }
+  nav ul .queue-show.show3 {
+    display: block;
+  }
+  nav ul .tree-show.show4 {
+    display: block;
+  }
+  nav ul .graph-show.show5 {
+    display: block;
+  }
+  nav ul .string-show.show6 {
+    display: block;
+  }
+  nav ul .recursion-show.show7 {
+    display: block;
+  }
+  nav ul .heap-show.show8 {
+    display: block;
+  }
+  nav ul ul li {
+    line-height: 27px;
+    border-bottom: none;
+  }
+  nav ul ul li a {
+    font-size: 13px;
+    color:#e6e6e6;
+    padding-left: 35%;
+  
+  }
+  nav  ul li a span {
+    position: absolute; /*it will take an sign to the right side but 20px before*/
+    top:50%;
+    right:20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transform: transform 0.4s;
+  
+  }
+  nav ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  a{
+      text-decoration: none;
+      color: white;
+  }
+  .line {
+    transition: 0.5s;
+    transition-delay: 0s;
+    margin: 5px;
+    top: 50px;
+    border-left: 4px solid darkgray;
+    position: fixed;
+    left:27%;
+    height:100%;
+    /* opacity: 0; */
+  }
+  
+  .container {
+    width: 60%;
+    position: relative;
+    left: 29%;
+    top: 70px;
+    height:100%;
+    transition: all 1s;
+  }
+  
+  .cards {
+    margin-left: 22px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    opacity: 0.8;
+    background-color: black;
+    width:100%;
+    height:220px;
+    box-shadow: 0px 0px 5px;
+    transition: all .8s;
+    
+  }
+  .cards:hover {
+    box-shadow: 0 0 5px aqua;
+    transform:scale(1.1);
+    border-radius: 30px;
+  }
+  .cards .title {
+      font-size: 22px;
+      font-weight: 500;
+      padding-top: 20px;
+      padding-left: 20px;
+  }
+  .cards .topic-tags {
+      font-size: 15px;
+      margin:8px 22px;
+  }
+  .cards .difficulty {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .cards .popularity {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 14px;
+  }
+  
+  @keyframes easy {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:40%;
+      left:0px;
+    }
+  }
+  
+  .dif {
+    margin-top:5px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width:90%;
+    position: relative;
+  }
+  .easy {
+    height: 7px;
+    animation: easy 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  
+  @keyframes hard {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:100%;
+      left:0px;
+    }
+  }
+  .hard {
+    height: 7px;
+    animation: hard 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  
+  @keyframes medi {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:75%;
+      left:0px;
+    }
+  }
+  
+  .medi {
+    height: 7px;
+    animation: medi 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  @keyframes nor {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:70%;
+      left:0px;
+    }
+  }
+  .popular {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width: 90%;
+    position: relative;
+  
+  }
+  .nor {
+    height: 7px;
+    animation: nor 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  
+  @keyframes high {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:100%;
+      left:0px;
+    }
+  }
+  
+  .high {
+    height: 7px;
+    animation: high 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  @keyframes low {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:45%;
+      left:0px;
+    }
+  }
+  
+  .low {
+    height: 7px;
+    animation: low 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  .show-btn,.hide-btn {
+      opacity:0;
+      font-size: 30px;
+      color: white;
+      position: fixed;
+      top: 15px;
+      left:20px; 
+  }
+  .hide-btn {
+      opacity: 0;
+  }
+  #chk:checked ~ .sidebar {
+      left:0;
+  }
+  #chk:checked ~ .show-btn {
+    opacity:0;
+  }
+  #chk:checked ~ .hide-btn {
+    opacity:1.0;
+  }
+  #chk:checked ~ .line {
+    transition-delay: 1s;
+    opacity: 1;
+  }
+  #chk:checked ~ .container {
+    margin-left: 25%;
+    z-index:-1;
+    margin-left: 25%;
+    width: 60%;
+    position: absolute;
+    top: 60px;;
+    height:100%;
+  } 
+ 
+} 
+
+@media (max-width: 569px){
+  .header {
+    z-index: 2;
+    position: fixed;
+    width:100%;
+    text-align: center;
+    color: white;
+    line-height: 45px;
+    height:45px;
+    background-color: #1b1b1b;
+    display: block;
+  }
+  .sidebar {
+    top: 45px;
+    width:100%;
+    position: fixed;
+    height: 100%;
+    background: #1b1b1b;
+    left:-100%;
+    transition: all 1s;
+  }
+  .sidebar .text {
+    color: white;
+    font-size: 28px;
+    font-weight: 600; /*it will bold the white letter*/
+    line-height: 35px;
+    text-align: center;
+    background: #1b1b1b;
+    letter-spacing: 1px;
+  }
+  nav ul {
+    background-color: #1b1b1b;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+  nav ul li {
+    line-height: 37px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 25px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left:5px solid transparent; /*transparent matlb it will not visible */
+  }
+  nav ul li a:hover {
+    border-left-color: grey;
+    color: cyan;
+    background: #1e1e1e;
+  }
+  nav ul ul {
+    position: static;/*it is the default value*/
+    display: none;/*it will remove it and another will come at that place*/
+  }
+  nav ul .array-show.show0 {
+    display: block;
+  }
+  nav ul .list-show.show1 {
+    display: block;
+  }
+  nav ul .stack-show.show2 {
+    display: block;
+  }
+  nav ul .queue-show.show3 {
+    display: block;
+  }
+  nav ul .tree-show.show4 {
+    display: block;
+  }
+  nav ul .graph-show.show5 {
+    display: block;
+  }
+  nav ul .string-show.show6 {
+    display: block;
+  }
+  nav ul .recursion-show.show7 {
+    display: block;
+  }
+  nav ul .heap-show.show8 {
+    display: block;
+  }
+  nav ul ul li {
+    line-height: 37px;
+    border-bottom: none;
+  }
+  nav ul ul li a {
+    font-size: 15px;
+    color:#e6e6e6;
+    padding-left: 45%;
+  
+  }
+  nav  ul li a span {
+    position: absolute; /*it will take an sign to the right side but 20px before*/
+    top:50%;
+    right:20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transform: transform 0.4s;
+  
+  }
+  nav ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  a{
+      text-decoration: none;
+      color: white;
+  }
+  .line {
+    transition: 0.5s;
+    transition-delay: 0s;
+    margin: 5px;
+    top: 50px;
+    border-left: 4px solid darkgray;
+    position: fixed;
+    left:27%;
+    height:100%;
+    opacity: 0;
+  }
+  
+  .container {
+    margin: auto;
+    width: 80%;
+    position: relative;
+    top: 50px;
+    height:100%;
+    transition: all 1s;
+  }
+  
+  .cards {
+    margin-bottom: 25px;
+    border-radius: 10px;
+    opacity: 0.8;
+    background-color: black;
+    width:100%;
+    height:220px;
+    box-shadow: 0px 0px 5px;
+    transition: all .8s;
+    
+  }
+  .cards:hover {
+    box-shadow: 0 0 5px aqua;
+    transform:scale(1.1);
+    border-radius: 30px;
+  }
+  .cards .title {
+      font-size: 22px;
+      font-weight: 500;
+      padding-top: 20px;
+      padding-left: 20px;
+  }
+  .cards .topic-tags {
+      font-size: 15px;
+      margin:8px 22px;
+  }
+  .cards .difficulty {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .cards .popularity {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 14px;
+  }
+  
+  @keyframes easy {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:40%;
+      left:0px;
+    }
+  }
+  
+  .dif {
+    margin-top:5px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width:90%;
+    position: relative;
+  }
+  .easy {
+    height: 7px;
+    animation: easy 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  
+  @keyframes hard {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:100%;
+      left:0px;
+    }
+  }
+  .hard {
+    height: 7px;
+    animation: hard 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  
+  @keyframes medi {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:75%;
+      left:0px;
+    }
+  }
+  
+  .medi {
+    height: 7px;
+    animation: medi 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  @keyframes nor {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:70%;
+      left:0px;
+    }
+  }
+  .popular {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width: 90%;
+    position: relative;
+  
+  }
+  .nor {
+    height: 7px;
+    animation: nor 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  
+  @keyframes high {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:100%;
+      left:0px;
+    }
+  }
+  
+  .high {
+    height: 7px;
+    animation: high 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  @keyframes low {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:45%;
+      left:0px;
+    }
+  }
+  
+  .low {
+    height: 7px;
+    animation: low 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  .show-btn,.hide-btn {
+      z-index: 2;
+      font-size: 20px;
+      color: white;
+      position: fixed;
+      top: 10px;
+      left:20px; 
+  }
+  .hide-btn {
+      opacity: 0;
+  }
+  #chk:checked ~ .sidebar {
+      left:0;
+  }
+  #chk:checked ~ .show-btn {
+    opacity:0;
+  }
+  #chk:checked ~ .hide-btn {
+    opacity:1.0;
+  }
+  #chk:checked ~ .line {
+    transition-delay: 1s;
+    opacity: 0;
+  }
+  #chk:checked ~ .container {
+    display: none;
+  
+  } 
+} 
+
+
+
+
+
+

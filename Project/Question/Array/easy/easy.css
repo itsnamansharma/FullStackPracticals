@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidebar {
+  position: fixed;
+  display: inline-block;
+    width:250px;
+    margin-bottom: 20px;
+    left: 0;
+    height: 100%;
+    background: #1b1b1b;
+
+}
+.sidebar .text {
+    color: white;
+    font-size: 25px;
+    font-weight: 600; /*it will bold the white letter*/
+    line-height: 65px;
+    text-align: center;
+    background: #1e1e1e;
+    letter-spacing: 1px;
+}
+nav ul {
+    background-color: #1b1b1b;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+nav ul li {
+    line-height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left:5px solid transparent; /*transparent matlb it will not visible */
+}
+nav ul li a:hover {
+    border-left-color: grey;
+    color: cyan;
+    background: #1e1e1e;
+}
+nav ul ul {
+    position: static;/*it is the default value*/
+    display: none;/*it will remove it and another will come at that place*/
+}
+nav ul .array-show.show0 {
+    display: block;
+}
+nav ul .list-show.show1 {
+    display: block;
+}
+nav ul .stack-show.show2 {
+    display: block;
+}
+nav ul .queue-show.show3 {
+    display: block;
+}
+nav ul .tree-show.show4 {
+    display: block;
+}
+nav ul .graph-show.show5 {
+    display: block;
+}
+nav ul .string-show.show6 {
+    display: block;
+}
+nav ul .recursion-show.show7 {
+    display: block;
+}
+nav ul .heap-show.show8 {
+    display: block;
+}
+nav ul ul li {
+    line-height: 42px;
+    border-bottom: none;
+}
+nav ul ul li a {
+    font-size: 17px;
+    color:#e6e6e6;
+    padding-left: 80px;
+
+}
+nav  ul li a span {
+    position: absolute; /*it will take an sign to the right side but 20px before*/
+    top:50%;
+    right:20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transform: transform 0.4s;
+
+}
+nav ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+}
+  a{
+      text-decoration: none;
+      color: white;
+  }
+
+  .line {
+    border-left: 4px solid darkgray;
+    position: fixed;
+    left:280px;
+    height:100%;
+  }
+  .container {
+    width: 1000px;
+    height:100%;
+    border: 1px solid aqua;
+    margin-left: 300px;
+  }
+
+  .cards {
+    margin:30px 30px 30px 30px;
+    float: left;
+    border-radius: 10px;
+    background-color: black;
+    width:25vw;
+    height: 18vw;
+    box-shadow: 0px 0px 5px;
+    transition: all 1s;
+    
+  }
+  .cards:hover {
+    box-shadow: 0.14vw 0.14vw 1.46vw aqua;
+    transform:scale(1.2);
+    border-radius: 30px;
+  }
+  .cards .title {
+      text-align:center ;
+      font-size: 25px;
+      padding: 7px 0px;
+  }
+  .cards .topic-tags {
+      font-size: 18px;
+      margin:15px 22px;
+  }
+  .cards .difficulty {
+    font-size: 18px;
+    margin:15px 22px;
+}
+
+.cards .popularity {
+    font-size: 18px;
+    margin:15px 22px;
+}
+
+@keyframes easy {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:11vw;
+      left:0px;
+    }
+}
+
+.dif {
+    margin-top:15px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width: 22vw;
+    position: relative;
+  }
+  .easy {
+    height: 7px;
+    animation: easy 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+
+  @keyframes hard {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:22vw;
+      left:0px;
+    }
+}
+  .hard {
+    height: 7px;
+    animation: hard 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+
+  @keyframes medi {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:17vw;
+      left:0px;
+    }
+}
+
+  .medi {
+    height: 7px;
+    animation: medi 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aqua;
+  }
+  @keyframes nor {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:16vw;
+      left:0px;
+    }
+}
+  .popular {
+    margin:auto ;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 7px;
+    width: 22vw;
+    position: relative;
+
+  }
+  .nor {
+    height: 7px;
+    animation: nor 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  
+  @keyframes high {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:22vw;
+      left:0px;
+    }
+}
+  
+  .high {
+    height: 7px;
+    animation: high 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+  @keyframes low {
+    from{
+      width: 0px;
+      left:0px
+    }
+    to {
+      width:15vw;
+      left:0px;
+    }
+}
+  
+  .low {
+    height: 7px;
+    animation: low 7s;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: 1.0;
+    animation-fill-mode: both;
+    position: absolute;
+    background-color: aquamarine;
+  }
+
+

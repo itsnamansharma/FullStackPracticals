@@ -1,0 +1,897 @@
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@media (min-width: 1201px) {
+.header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:60px;
+  background-color: black;
+  
+}
+.leftbar {
+ margin-top: 80px;
+ float: left;
+ height: 100%;
+ width: 20%;
+
+}
+.box {
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px;
+}
+.collapsible {
+    width: 100%;
+    background-color:black;
+    opacity: 0.8;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    font-size: 25px;
+    text-align: left; 
+     outline: none;
+     transition: .3s;
+  }
+  
+   .collapsible:hover {
+    color: darkgray;
+    font-weight: 700;
+  }
+  
+  .collapsible:after {
+    color: darkgray;
+    font-weight: 700;
+    content: '\002B';
+    font-weight: bold;
+    float: left;
+    font-size: 30px;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    color: aqua;
+    font-weight: 700;
+    content: "\2212";
+  } 
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  .content ul {
+    background-color: black;
+    opacity: 0.8;
+    height: 100%;
+    width:100%;
+    margin-left: 0;
+    list-style: none;
+}
+.content ul li {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    display:block;
+}
+.content ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+.content ul li a:hover {
+    background: black;
+    color: darkgray;
+    text-decoration: underline;
+    font-size: 32px;
+} 
+
+
+.table {
+  margin-top:100px;
+  float: right;
+  width: 50%;
+  height: 100%;
+
+}
+.table .ds {
+  background-color: black;
+  opacity: 0.8;
+  right: 40%;
+  position: relative;
+  box-shadow: 0 0 5px;
+  width:100%;
+  margin-bottom: 60px;
+  border-bottom-right-radius:10px ;
+  border-bottom-left-radius: 10px;
+}
+.table .algo {
+  background-color: black;
+  opacity: 0.8;
+  box-shadow: 0 0 5px;
+  right: 40%;
+  position: relative;
+  box-sizing: 0 0 5px;
+  width:100%;
+  margin-right: 20px;
+  margin-bottom: 60px;
+  border-bottom-right-radius:10px ;
+  border-bottom-left-radius: 10px;
+  
+}
+.table .cs {
+  background-color: black;
+  opacity: 0.8;
+  box-shadow: 0 0 5px;
+  right: 40%;
+  position: relative;
+  box-sizing: 0 0 5px;
+  width:100%;
+  margin-right: 30px;
+  border-bottom-right-radius:10px ;
+  border-bottom-left-radius: 10px;
+  
+}
+.table caption {
+  background-color: white;
+ margin-left: 10px;
+ font-size: 20px;
+  margin-top: -20px;
+  border-radius: 50px;
+  font-weight: 900;
+  border: 1px solid black;
+  padding:10px;
+}
+.table caption:hover {
+  color: darkgray;
+}
+table {
+  padding: 20px;
+}
+td {
+  width: 45%;
+  height:30px;
+  color: white;
+}
+td a {
+  font-size:20px;
+  color: darkgray;
+  text-decoration: none;
+  transition: all .2s  ease-in-out;
+}
+td a:hover {
+  font-size: 25px;
+  color: aqua;
+  
+
+}
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .header {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    height:50px;
+    background-color: black;
+    
+  }
+  .leftbar {
+   margin-top: 70px;
+   float: left;
+   height: 100%;
+   width: 20%;
+  
+  }
+  .box {
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+  }
+  .collapsible {
+      width: 100%;
+      background-color:black;
+      opacity: 0.8;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      font-size: 17px;
+      text-align: left; 
+       outline: none;
+       transition: .3s;
+    }
+    
+     .collapsible:hover {
+      color: darkgray;
+      font-weight: 700;
+    }
+    
+    .collapsible:after {
+      color: darkgray;
+      font-weight: 700;
+      content: '\002B';
+      font-weight: bold;
+      float: left;
+      font-size: 20px;
+      margin-right: 8px;
+      margin-left: 5px;
+    }
+    
+    .active:after {
+      color: aqua;
+      font-weight: 700;
+      content: "\2212";
+    } 
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+      background-color: #f1f1f1;
+    }
+  
+    .content ul {
+      background-color: black;
+      opacity: 0.8;
+      height: 100%;
+      width:100%;
+      margin-left: 0;
+      list-style: none;
+  }
+  .content ul li {
+      width: 100%;
+      height: 100%;
+      line-height: 45px;
+      display:block;
+  }
+  .content ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      text-align: center;
+      font-weight: 500;
+      display: block;
+      width: 100%;
+      transition: 0.3s;
+  }
+  .content ul li a:hover {
+      background: black;
+      color: darkgray;
+      text-decoration: underline;
+      font-size: 26px;
+  } 
+  
+  
+  .table {
+  
+    margin-top:85px;
+    float: right;
+    width: 50%;
+    height: 100%;
+  
+  }
+  .table .ds {
+    background-color: black;
+    opacity: 0.8;
+    right: 40%;
+    position: relative;
+    box-shadow: 0 0 5px;
+    width:100%;
+    margin-bottom: 80px;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+  }
+  .table .algo {
+    background-color: black;
+    opacity: 0.8;
+    box-shadow: 0 0 5px;
+    right: 40%;
+    position: relative;
+    box-sizing: 0 0 5px;
+    width:100%;
+    margin-bottom: 50px;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    
+  }
+  .table .cs {
+    background-color: black;
+    opacity: 0.8;
+    box-shadow: 0 0 5px;
+    right: 40%;
+    position: relative;
+    box-sizing: 0 0 5px;
+    width:100%;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    
+  }
+  .table caption {
+    background-color: white;
+   margin-left: 10px;
+   font-size: 25px;
+    margin-top: -17px;
+    border-radius: 40px;
+    font-weight: 900;
+    border: 1px solid black;
+    padding:8px;
+  }
+  .table caption:hover {
+    color: darkgray;
+  }
+  table {
+    padding: 20px;
+  }
+  td {
+    width: 45%;
+    height:25px;
+    color: white;
+  }
+  td a {
+    font-size:18px;
+    color: darkgray;
+    text-decoration: none;
+    transition: all .2s  ease-in-out;
+  }
+  td a:hover {
+    font-size: 24px;
+    color: aqua;
+    
+  
+  }
+  }
+
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+      z-index: 2;
+      position: fixed;
+      width: 100%;
+      display: flex;
+      height:40px;
+      background-color: black;
+      
+    }
+    .leftbar {
+     margin-top: 60px;
+     float: left;
+     height: 100%;
+     width: 30%;
+    
+    }
+    .box {
+      margin-bottom: 10px;
+      width: 100%;
+      border-radius: 7px;
+      box-shadow: 0 0 3px;
+    }
+    .collapsible {
+        width: 100%;
+        background-color:black;
+        opacity: 0.8;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        font-size: 30px;
+        text-align: left; 
+         outline: none;
+         transition: .3s;
+      }
+      
+       .collapsible:hover {
+        color: darkgray;
+        font-weight: 700;
+      }
+      
+      .collapsible:after {
+        color: darkgray;
+        font-weight: 700;
+        content: '\002B';
+        font-weight: bold;
+        float: left;
+        font-size: 30px;
+        margin-right: 8px;
+        margin-left: 5px;
+      }
+      
+      .active:after {
+        color: aqua;
+        font-weight: 700;
+        content: "\2212";
+      } 
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        background-color: #f1f1f1;
+      }
+    
+      .content ul {
+        background-color: black;
+        opacity: 0.8;
+        height: 100%;
+        width:100%;
+        margin-left: 0;
+        list-style: none;
+    }
+    .content ul li {
+        width: 100%;
+        height: 100%;
+        line-height: 45px;
+        display:block;
+    }
+    .content ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+        display: block;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .content ul li a:hover {
+        background: black;
+        color: darkgray;
+        text-decoration: underline;
+        font-size: 24px;
+    } 
+    
+    
+    .table {
+      margin-top:65px;
+      float: right;
+      width: 50%;
+      height: 100%;
+    
+    }
+    .table .ds {
+      background-color: black;
+      opacity: 0.8;
+      right: 30%;
+      position: relative;
+      box-shadow: 0 0 3px;
+      width:100%;
+      margin-bottom: 40px;
+      border-bottom-right-radius:7px ;
+      border-bottom-left-radius: 7px;
+    }
+    .table .algo {
+      background-color: black;
+      opacity: 0.8;
+      box-shadow: 0 0 3px;
+      right: 30%;
+      position: relative;
+      box-sizing: 0 0 3px;
+      width:100%;
+      margin-bottom: 40px;
+      border-bottom-right-radius:7px ;
+      border-bottom-left-radius: 7px;
+      
+    }
+    .table .cs {
+      background-color: black;
+      opacity: 0.8;
+      box-shadow: 0 0 3px;
+      right: 30%;
+      position: relative;
+      box-sizing: 0 0 3px;
+      width:100%;
+      
+      border-bottom-right-radius:7px ;
+      border-bottom-left-radius: 7px;
+      
+    }
+    .table caption {
+      background-color: white;
+      margin-left: 10px;
+      font-size: 22px;
+      margin-top: -10px;
+      border-radius: 30px;
+      font-weight: 900;
+      border: 1px solid black;
+      padding:10px;
+    }
+    .table caption:hover {
+      color: darkgray;
+    }
+    table {
+      padding: 15px;
+    }
+    td {
+      width: 45%;
+      height:30px;
+      color: white;
+    }
+    td a {
+      font-size:17px;
+      color: darkgray;
+      text-decoration: none;
+      transition: all .2s  ease-in-out;
+    }
+    td a:hover {
+      font-size: 20px;
+      color: aqua;
+      
+    
+    }
+    }
+
+    
+
+    @media (min-width: 481px) and (max-width: 767px) {
+      .header {
+        
+        width: 100%;
+        display:flex;
+        height:40px;
+        background-color: black;
+        
+      }
+      .leftbar {
+       margin-top: 10px;
+       height: 100%;
+       width: 100%;
+      
+      }
+      .box {
+        margin-bottom: 10px;
+        width: 100%;
+        border-radius: 7px;
+        box-shadow: 0 0 6px;
+      }
+      .collapsible {
+          width: 100%;
+          background-color:black;
+          opacity: 0.8;
+          color: white;
+          cursor: pointer;
+          padding: 10px;
+          width: 100%;
+          border: none;
+          font-size: 30px;
+          text-align: left; 
+           outline: none;
+           transition: .3s;
+        }
+        
+         .collapsible:hover {
+          color: darkgray;
+          font-weight: 700;
+        }
+        
+        .collapsible:after {
+          color: darkgray;
+          font-weight: 700;
+          content: '\002B';
+          font-weight: bold;
+          float: right;
+          font-size: 30px;
+          margin-right: 8px;
+          margin-left: 5px;
+        }
+        
+        .active:after {
+          color: aqua;
+          font-weight: 700;
+          content: "\2212";
+        } 
+        .content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.4s ease-out;
+          background-color: #f1f1f1;
+        }
+      
+        .content ul {
+          background-color: black;
+          opacity: 0.8;
+          height: 100%;
+          width:100%;
+          margin-left: 0;
+          list-style: none;
+      }
+      .content ul li {
+          width: 100%;
+          height: 100%;
+          line-height: 45px;
+          display:block;
+      }
+      .content ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
+          text-align: center;
+          font-weight: 500;
+          display: block;
+          width: 100%;
+          transition: 0.3s;
+      }
+      .content ul li a:hover {
+          background: black;
+          color: darkgray;
+          text-decoration: underline;
+          font-size: 24px;
+      } 
+      
+      
+      .table {
+        margin-top:45px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+      
+      }
+      .table .ds {
+        background-color: black;
+        opacity: 0.8;
+        position: relative;
+        box-shadow: 0 0 5px;
+        width:100%;
+        margin-bottom: 40px;
+        border-bottom-right-radius:7px ;
+        border-bottom-left-radius: 7px;
+      }
+      .table .algo {
+        background-color: black;
+        opacity: 0.8;
+        box-shadow: 0 0 5px;
+        position: relative;
+        width:100%;
+        margin-bottom: 40px;
+        border-bottom-right-radius:7px ;
+        border-bottom-left-radius: 7px;
+        
+      }
+      .table .cs {
+        background-color: black;
+        opacity: 0.8;
+        box-shadow: 0 0 3px;
+        position: relative;
+        box-sizing: 0 0 3px;
+        width:100%;
+        margin-bottom: 40px;
+        
+        border-bottom-right-radius:7px ;
+        border-bottom-left-radius: 7px;
+        
+      }
+      .table caption {
+        background-color: white;
+        margin-left: 10px;
+        font-size: 22px;
+        margin-top: -10px;
+        border-radius: 30px;
+        font-weight: 900;
+        border: 1px solid black;
+        padding:10px;
+      }
+      .table caption:hover {
+        color: darkgray;
+      }
+      table {
+        padding: 15px;
+      }
+      td {
+        width: 45%;
+        height:30px;
+        color: white;
+      }
+      td a {
+        font-size:17px;
+        color: darkgray;
+        text-decoration: none;
+        transition: all .2s  ease-in-out;
+      }
+      td a:hover {
+        font-size: 24px;
+        color: aqua;
+        
+      
+      }
+      }
+
+      
+
+      @media (max-width: 480px) {
+        .header {
+          z-index: 2;
+          position: fixed;
+          width: 100%;
+          display:flex;
+          height:30px;
+          background-color: black;
+          
+        }
+        .leftbar {
+          position: relative;
+         top: 40px;
+         height: 100%;
+         width: 100%;
+        
+        }
+        .box {
+          margin-bottom: 10px;
+          width: 100%;
+          border-radius: 7px;
+          box-shadow: 0 0 6px;
+        }
+        .collapsible {
+            width: 100%;
+            background-color:black;
+            opacity: 0.8;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            font-size: 25px;
+            text-align: left; 
+             outline: none;
+             transition: .3s;
+          }
+          
+           .collapsible:hover {
+            color: darkgray;
+            font-weight: 700;
+          }
+          
+          .collapsible:after {
+            color: darkgray;
+            font-weight: 700;
+            content: '\002B';
+            font-weight: bold;
+            float: right;
+            font-size: 25px;
+            margin-right: 8px;
+            margin-left: 5px;
+          }
+          
+          .active:after {
+            color: aqua;
+            font-weight: 700;
+            content: "\2212";
+          } 
+          .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background-color: #f1f1f1;
+          }
+        
+          .content ul {
+            background-color: black;
+            opacity: 0.8;
+            height: 100%;
+            width:100%;
+            margin-left: 0;
+            list-style: none;
+        }
+        .content ul li {
+            width: 100%;
+            height: 100%;
+            line-height: 30px;
+            display:block;
+        }
+        .content ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            text-align: center;
+            font-weight: 500;
+            display: block;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .content ul li a:hover {
+            background: black;
+            color: darkgray;
+            text-decoration: underline;
+            font-size: 22px;
+        } 
+        
+        
+        .table {
+          margin-top:75px;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          height: 100%;
+        
+        }
+        .table .ds {
+          background-color: black;
+          opacity: 0.8;
+          position: relative;
+          box-shadow: 0 0 5px;
+          width:100%;
+          margin-bottom: 35px;
+          border-bottom-right-radius:7px ;
+          border-bottom-left-radius: 7px;
+        }
+        .table .algo {
+          background-color: black;
+          opacity: 0.8;
+          box-shadow: 0 0 5px;
+          position: relative;
+          width:100%;
+          margin-bottom: 35px;
+          border-bottom-right-radius:7px ;
+          border-bottom-left-radius: 7px;
+          
+        }
+        .table .cs {
+          background-color: black;
+          opacity: 0.8;
+          box-shadow: 0 0 5px;
+          position: relative;
+          box-sizing: 0 0 5px;
+          width:100%;
+          margin-bottom: 35px;
+          
+          border-bottom-right-radius:7px ;
+          border-bottom-left-radius: 7px;
+          
+        }
+        .table caption {
+          background-color: white;
+          margin-left: 10px;
+          font-size: 22px;
+          margin-top: -10px;
+          border-radius: 30px;
+          font-weight: 900;
+          border: 1px solid black;
+          padding:10px;
+        }
+        .table caption:hover {
+          color: darkgray;
+        }
+        table {
+          padding: 15px;
+        }
+        td {
+          width: 45%;
+          height:35px;
+          color: white;
+        }
+        td a {
+          font-size:14px;
+          color: darkgray;
+          text-decoration: none;
+          transition: all .2s  ease-in-out;
+        }
+        td a:hover {
+          font-size: 20px;
+          color: aqua;
+          
+        
+        }
+        
+        }
+
+        
+
+        
